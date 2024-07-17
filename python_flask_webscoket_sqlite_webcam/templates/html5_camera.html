@@ -111,6 +111,15 @@ socket.on('new_item_event', function(msg){
 });
 
 
+socket.on('detected_objects', function(msg){    
+    console.log('got detected_objects')
+	itemlist=JSON.parse(msg['objs'])
+    console.log(itemlist)
+	add_item(itemlist)
+});
+
+
+
 
 
 //---JQuery stuff-----------------------
